@@ -2,7 +2,7 @@
 
 #define MAXLINE     1000
 
-int getline(char line[], int maxline);
+int my_getline(char line[], int maxline);
 int remove_blank(char line[]);
 
 int main(void)
@@ -10,7 +10,7 @@ int main(void)
     char line[MAXLINE];
     int  len;
 
-    while ((len = getline(line, MAXLINE)) > 0) {
+    while ((len = my_getline(line, MAXLINE)) > 0) {
         if (remove_blank(line) > 0) {
             printf("%s", line);
         }
@@ -18,7 +18,7 @@ int main(void)
     return 0;
 }
 
-int getline(char s[], int lim)
+int my_getline(char s[], int lim)
 {
     int c;
     int i;

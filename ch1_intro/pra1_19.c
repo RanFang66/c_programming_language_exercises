@@ -1,20 +1,20 @@
 #include    <stdio.h>
 #define     MAXLINE  1000
 
-int getline(char line[], int maxline);
+int my_getline(char line[], int maxline);
 void reverse(char s[]);
 
 int main(void)
 {
     char line[MAXLINE];
 
-    while(getline(line, MAXLINE) > 0) {
+    while(my_getline(line, MAXLINE) > 0) {
         reverse(line);
         printf("%s", line);
     }
 }
 
-int getline(char s[], int lim)
+int my_getline(char s[], int lim)
 {
     int c;
     int i;

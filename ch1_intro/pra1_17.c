@@ -4,14 +4,14 @@
 #define     LONGLINE    80
 
 
-int getline(char line[], int maxline);
+int my_getline(char line[], int maxline);
 
 int main(void)
 {
     char line[MAXLINE];
     int  len;
 
-    while ((len = getline(line, MAXLINE)) > 0) {
+    while ((len = my_getline(line, MAXLINE)) > 0) {
         if (len > LONGLINE) {
             printf("%d : %s", len, line);
         }
@@ -20,7 +20,7 @@ int main(void)
     return 0;
 }
 
-int getline(char s[], int lim)
+int my_getline(char s[], int lim)
 {
     int c, i;
     int j = 0;
